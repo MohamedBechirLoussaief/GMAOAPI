@@ -1,0 +1,11 @@
+services:
+  gmaoapi:
+    image: ${DOCKER_REGISTRY-}gmaoapi
+    build:
+      context: GMAOAPI
+      dockerfile: Dockerfile
+
+  redis :
+   image: redis
+   ports:
+   - "6379:6379"
